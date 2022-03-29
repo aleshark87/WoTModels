@@ -1,0 +1,51 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1"
+  ],
+  "@type": "tm:ThingModel",
+  "title": "Car",
+  "id": "car",
+  "description": "A car with an engine, indicators, and wear stats.",
+  "version": {
+    "model": "2.0.0"
+  },
+  "links": [
+    {
+      "rel": "tm:submodel",
+      "href": "https://raw.githubusercontent.com/aleshark87/WoTModels/main/status.jsonld",
+      "type": "application/tm+json",
+      "instanceName": "status"
+    },
+    {
+      "rel": "tm:submodel",
+      "href": "https://raw.githubusercontent.com/aleshark87/WoTModels/main/indicator-light.jsonld",
+      "type": "application/tm+json",
+      "instanceName": "indicator-light"
+    },
+    {
+      "rel": "tm:submodel",
+      "href": "https://raw.githubusercontent.com/aleshark87/WoTModels/main/WearTime.jsonld",
+      "type": "application/tm+json",
+      "instanceName": "wear-time"
+    }
+  ],
+  "properties": {
+    "manufacturer": {
+      "tile": "Manufacturer",
+      "type": "string",
+      "readOnly": true
+    },
+    "serialNo": {
+      "tile": "Serial number",
+      "type": "string",
+      "readOnly": true
+    }
+  },
+  "actions": {
+    "toggle-engine": {
+      "title": "Switch The Engine",
+      "description": "Switches the engine on/off based on the passed in boolean.",
+      "type": "boolean"
+    }
+  }
+}
