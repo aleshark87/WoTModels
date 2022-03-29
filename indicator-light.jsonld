@@ -1,0 +1,24 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1"
+  ],
+  "@type": "tm:ThingModel",
+  "id": "indicator-light",
+  "title": "Indicator Light",
+  "version": {
+    "model": "1.0.0"
+  },
+
+  "properties": {
+    "battery-indicator": {
+      "title": "Engine Indicator",
+      "description": "The current Battery Failure Indicator Light.",
+      "type": "boolean"
+    },
+    "engine-indicator":{
+      "title": "Charge Level",
+      "description": "The current Engine Failure Indicator Light.",
+      "type": "double"
+    }
+  }
+}

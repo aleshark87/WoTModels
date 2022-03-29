@@ -1,0 +1,43 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1"
+  ],
+  "@type": "tm:ThingModel",
+  "id": "status",
+  "title": "Wear Time",
+  "version": {
+    "model": "1.0.0"
+  },
+  "properties": {
+    "battery-wear": {
+      "title": "Battery Wear",
+      "description": "The current battery wear.",
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "engine-wear": {
+      "title": "Engine Wear",
+      "description": "The current engine wear.",
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100
+    }
+  },
+  "events": {
+    "Battery Protection": {
+      "title": "Battery Protection",
+      "description": "When the wear of the battery is excessive, go in battery protection.",
+      "data": {
+        "type": "string"
+      }
+    },
+    "Engine Protection": {
+      "title": "Engine Protection",
+      "description": "When the wear of the engine is excessive, go in engine protection.",
+      "data": {
+        "type": "string"
+      }
+    }
+  }
+}
