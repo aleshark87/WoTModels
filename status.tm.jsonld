@@ -14,7 +14,7 @@
       "description": "The current Engine Status.",
       "type": "boolean"
     },
-    "charge-level":{
+    "charge-level": {
       "title": "Charge Level",
       "description": "The current Charge Level.",
       "type": "double",
