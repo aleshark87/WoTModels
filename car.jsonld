@@ -18,15 +18,15 @@
     },
     {
       "rel": "tm:submodel",
-      "href": "https://raw.githubusercontent.com/aleshark87/WoTModels/main/indicator-light.jsonld",
-      "type": "application/tm+json",
-      "instanceName": "indicator-light"
-    },
-    {
-      "rel": "tm:submodel",
       "href": "https://raw.githubusercontent.com/aleshark87/WoTModels/main/WearTime.jsonld",
       "type": "application/tm+json",
       "instanceName": "wear-time"
+    },
+    {
+      "rel": "tm:submodel",
+      "href": "https://raw.githubusercontent.com/aleshark87/WoTModels/main/indicator-light.jsonld",
+      "type": "application/tm+json",
+      "instanceName": "indicator-light"
     }
   ],
   "properties": {
