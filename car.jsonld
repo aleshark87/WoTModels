@@ -4,7 +4,6 @@
   ],
   "@type": "tm:ThingModel",
   "title": "Car",
-  "id": "car",
   "description": "A car with an engine, indicators, and wear stats.",
   "version": {
     "model": "2.0.0"
@@ -14,19 +13,19 @@
       "rel": "tm:submodel",
       "href": "https://raw.githubusercontent.com/aleshark87/WoTModels/main/status.jsonld",
       "type": "application/tm+json",
-      "instanceName": "status"
+      "instanceName": "Status"
     },
     {
       "rel": "tm:submodel",
       "href": "https://raw.githubusercontent.com/aleshark87/WoTModels/main/WearTime.jsonld",
       "type": "application/tm+json",
-      "instanceName": "wear-time"
+      "instanceName": "WearTime"
     },
     {
       "rel": "tm:submodel",
       "href": "https://raw.githubusercontent.com/aleshark87/WoTModels/main/indicator-light.jsonld",
       "type": "application/tm+json",
-      "instanceName": "indicator-light"
+      "instanceName": "IndicatorLight"
     }
   ],
   "properties": {
