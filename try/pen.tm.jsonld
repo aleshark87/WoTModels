@@ -11,7 +11,7 @@
   "links": [
     {
       "rel": "tm:submodel",
-      "href": "https://raw.githubusercontent.com/aleshark87/WoTModels/main/status.tm.jsonld",
+      "href": "https://raw.githubusercontent.com/aleshark87/WoTModels/main/try/simpleproperty.tm.json",
       "type": "application/tm+json",
       "instanceName": "Status"
     }
