@@ -8,7 +8,6 @@
   "version": {
     "model": "1.0.0"
   },
-
   "properties": {
     "engine": {
       "title": "Engine Status",
