@@ -23,21 +23,5 @@
       "minimum": 0,
       "maximum": 100
     }
-  },
-  "events": {
-    "Battery Protection": {
-      "title": "Battery Protection",
-      "description": "When the wear of the battery is excessive, go in battery protection.",
-      "data": {
-        "type": "string"
-      }
-    },
-    "Engine Protection": {
-      "title": "Engine Protection",
-      "description": "When the wear of the engine is excessive, go in engine protection.",
-      "data": {
-        "type": "string"
-      }
-    }
   }
 }
