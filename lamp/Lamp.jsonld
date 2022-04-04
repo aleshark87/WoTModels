@@ -1,0 +1,42 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1"
+  ],
+  "@type": "tm:ThingModel",
+  "title": "Lamp",
+  "description": "A lamp that can turn on/off.",
+  "version": {
+    "model": "1.0.0"
+  },
+  "links": [
+    {
+      "rel": "tm:submodel",
+      "href": "",
+      "type": "application/tm+json",
+      "instanceName": "status"
+    }
+  ],
+  "properties": {
+    "serialNo": {
+      "tile": "Serial number",
+      "type": "string",
+      "readOnly": true
+    }
+  },
+  "actions": {
+    "toggle-engine": {
+      "title": "Switch The Lamp",
+      "description": "Switches the lamp on/off based on the passed in boolean.",
+      "type": "boolean"
+    }
+  },
+  "events": {
+    "burn": {
+      "title": "Lamp is burning",
+      "description": "Lamp catching fire",
+      "data": {
+        "type": "string"
+      }
+    }
+  }
+}
