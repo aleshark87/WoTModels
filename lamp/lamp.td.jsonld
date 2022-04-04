@@ -31,7 +31,7 @@
       }
    },
    "support":"https://www.eclipse.org/ditto/",
-   "created":"2022-04-04T09:49:05.169895797Z",
+   "created":"2022-04-04T13:09:40.829429443Z",
    "forms":[
       {
          "op":"readallproperties",
@@ -118,7 +118,6 @@
       "serialNo":{
          "tile":"Serial number",
          "type":"string",
-         "readOnly":true,
          "observable":true,
          "forms":[
             {
@@ -126,6 +125,30 @@
                "href":"/attributes/serialNo{?channel,timeout}",
                "htv:methodName":"GET",
                "contentType":"application/json",
+               "additionalResponses":[
+                  {
+                     "success":false,
+                     "schema":"dittoError"
+                  }
+               ]
+            },
+            {
+               "op":"writeproperty",
+               "href":"/attributes/serialNo{?channel,timeout,response-required}",
+               "htv:methodName":"PUT",
+               "contentType":"application/json",
+               "additionalResponses":[
+                  {
+                     "success":false,
+                     "schema":"dittoError"
+                  }
+               ]
+            },
+            {
+               "op":"writeproperty",
+               "href":"/attributes/serialNo{?channel,timeout,response-required}",
+               "htv:methodName":"PATCH",
+               "contentType":"application/merge-patch+json",
                "additionalResponses":[
                   {
                      "success":false,
