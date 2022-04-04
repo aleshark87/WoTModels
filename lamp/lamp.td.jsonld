@@ -1,0 +1,28 @@
+            },
+            "href":{
+               "type":"string",
+               "title":"Error link.",
+               "description":"A link to further information about the error and how to fix it.",
+               "format":"uri"
+            },
+            "status":{
+               "type":"integer",
+               "title":"Status code.",
+               "description":"The status code of the error with HTTP status code semantics (e.g.: 4xx for user errors, 5xx for server errors).",
+               "minimum":400,
+               "maximum":599
+            },
+            "description":{
+               "type":"string",
+               "title":"Error description.",
+               "description":"Contains further information about the error e.g. a hint what caused the problem and how to solve it."
+            }
+         },
+         "required":[
+            "status",
+            "error",
+            "message"
+         ]
+      }
+   }
+}
