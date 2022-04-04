@@ -4,14 +4,14 @@
   ],
   "@type": "tm:ThingModel",
   "title": "Lamp",
-  "description": "A lamp that can turn on/off.",
+  "description": "A lamp that can be turned on/off.",
   "version": {
     "model": "1.0.0"
   },
   "links": [
     {
       "rel": "tm:submodel",
-      "href": "",
+      "href": "https://raw.githubusercontent.com/aleshark87/WoTModels/main/lamp/status.jsonld",
       "type": "application/tm+json",
       "instanceName": "status"
     }
