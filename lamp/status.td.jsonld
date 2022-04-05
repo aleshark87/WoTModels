@@ -1,0 +1,251 @@
+{
+   "uriVariables":{
+      "response-required":{
+         "default":true,
+         "description":"Defines whether a response is required to the API call or not.",
+         "type":"boolean",
+         "title":"If a response is required."
+      },
+      "channel":{
+         "default":"twin",
+         "description":"Defines to which channel to route the command: 'twin' (digital twin) or 'live' (the device).",
+         "type":"string",
+         "title":"The Ditto channel to interact with.",
+         "enum":[
+            "twin",
+            "live"
+         ]
+      },
+      "fields":{
+         "description":"Contains a comma-separated list of fields (e.g. property names) to be included in the returned JSON.",
+         "type":"string",
+         "title":"Fields to select."
+      },
+      "timeout":{
+         "default":60,
+         "description":"Defines how long the backend should wait (in seconds) for completion of the request. A value of '0' applies fire and forget semantics for the command.",
+         "maximum":60,
+         "type":"integer",
+         "title":"The timeout to apply.",
+         "minimum":0
+      }
+   },
+   "schemaDefinitions":{
+      "dittoError":{
+         "description":"Provides additional information about an occurred error and how to resolve it.",
+         "type":"object",
+         "title":"Ditto error.",
+         "properties":{
+            "description":{
+               "description":"Contains further information about the error e.g. a hint what caused the problem and how to solve it.",
+               "type":"string",
+               "title":"Error description."
+            },
+            "href":{
+               "format":"uri",
+               "description":"A link to further information about the error and how to fix it.",
+               "type":"string",
+               "title":"Error link."
+            },
+            "error":{
+               "description":"The error code or identifier that uniquely identifies the error.",
+               "type":"string",
+               "title":"Error code identifier."
+            },
+            "message":{
+               "description":"The human readable message that explains what went wrong during the execution of a command/message.",
+               "type":"string",
+               "title":"Error message."
+            },
+            "status":{
+               "description":"The status code of the error with HTTP status code semantics (e.g.: 4xx for user errors, 5xx for server errors).",
+               "maximum":599,
+               "type":"integer",
+               "title":"Status code.",
+               "minimum":400
+            }
+         },
+         "required":[
+            "status",
+            "error",
+            "message"
+         ]
+      }
+   },
+   "@type":"Thing",
+   "created":"2022-04-05T09:22:54.687621447Z",
+   "title":"Status",
+   "@context":[
+      "https://www.w3.org/2022/wot/td/v1.1"
+   ],
+   "version":{
+      "instance":"1.0.0",
+      "model":"1.0.0"
+   },
+   "security":"basic_sc",
+   "links":[
+      {
+         "rel":"collection",
+         "href":"http://localhost:8080/api/2/things/projects.wot.ditto:lamp",
+         "type":"application/td+json"
+      },
+      {
+         "rel":"type",
+         "href":"https://raw.githubusercontent.com/aleshark87/WoTModels/main/lamp/status.jsonld",
+         "type":"application/tm+json"
+      }
+   ],
+   "id":"urn:projects.wot.ditto:lamp/features/status",
+   "securityDefinitions":{
+      "basic_sc":{
+         "scheme":"basic",
+         "in":"header"
+      }
+   },
+   "support":"https://www.eclipse.org/ditto/",
+   "forms":[
+      {
+         "op":"readallproperties",
+         "additionalResponses":[
+            {
+               "schema":"dittoError",
+               "success":false
+            }
+         ],
+         "href":"/properties{?channel,timeout}",
+         "htv:methodName":"GET",
+         "contentType":"application/json"
+      },
+      {
+         "op":"readmultipleproperties",
+         "additionalResponses":[
+            {
+               "schema":"dittoError",
+               "success":false
+            }
+         ],
+         "href":"/properties{?fields,channel,timeout}",
+         "htv:methodName":"GET",
+         "contentType":"application/json"
+      },
+      {
+         "op":"writeallproperties",
+         "additionalResponses":[
+            {
+               "schema":"dittoError",
+               "success":false
+            }
+         ],
+         "href":"/properties{?channel,timeout,response-required}",
+         "htv:methodName":"PUT",
+         "contentType":"application/json"
+      },
+      {
+         "op":"writemultipleproperties",
+         "additionalResponses":[
+            {
+               "schema":"dittoError",
+               "success":false
+            }
+         ],
+         "href":"/properties{?channel,timeout,response-required}",
+         "htv:methodName":"PATCH",
+         "contentType":"application/merge-patch+json"
+      },
+      {
+         "op":[
+            "observeallproperties",
+            "unobserveallproperties"
+         ],
+         "subprotocol":"sse",
+         "additionalResponses":[
+            {
+               "schema":"dittoError",
+               "success":false
+            }
+         ],
+         "href":"/properties",
+         "htv:methodName":"GET",
+         "contentType":"text/event-stream"
+      },
+      {
+         "op":[
+            "subscribeallevents",
+            "unsubscribeallevents"
+         ],
+         "subprotocol":"sse",
+         "additionalResponses":[
+            {
+               "schema":"dittoError",
+               "success":false
+            }
+         ],
+         "href":"/outbox/messages",
+         "htv:methodName":"GET",
+         "contentType":"text/event-stream"
+      }
+   ],
+   "properties":{
+      "lamp-status":{
+         "observable":true,
+         "description":"The current Engine Status.",
+         "title":"Lamp Status",
+         "type":"boolean",
+         "forms":[
+            {
+               "op":"readproperty",
+               "additionalResponses":[
+                  {
+                     "schema":"dittoError",
+                     "success":false
+                  }
+               ],
+               "href":"/properties/lamp-status{?channel,timeout}",
+               "htv:methodName":"GET",
+               "contentType":"application/json"
+            },
+            {
+               "op":"writeproperty",
+               "additionalResponses":[
+                  {
+                     "schema":"dittoError",
+                     "success":false
+                  }
+               ],
+               "href":"/properties/lamp-status{?channel,timeout,response-required}",
+               "htv:methodName":"PUT",
+               "contentType":"application/json"
+            },
+            {
+               "op":"writeproperty",
+               "additionalResponses":[
+                  {
+                     "schema":"dittoError",
+                     "success":false
+                  }
+               ],
+               "href":"/properties/lamp-status{?channel,timeout,response-required}",
+               "htv:methodName":"PATCH",
+               "contentType":"application/merge-patch+json"
+            },
+            {
+               "op":[
+                  "observeproperty",
+                  "unobserveproperty"
+               ],
+               "subprotocol":"sse",
+               "additionalResponses":[
+                  {
+                     "schema":"dittoError",
+                     "success":false
+                  }
+               ],
+               "href":"/properties/lamp-status",
+               "htv:methodName":"GET",
+               "contentType":"text/event-stream"
+            }
+         ]
+      }
+   },
+   "base":"http://localhost:8080/api/2/things/projects.wot.ditto:lamp/features/status"
+}
