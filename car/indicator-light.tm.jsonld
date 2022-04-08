@@ -1,0 +1,39 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1"
+  ],
+  "@type": "tm:ThingModel",
+  "id": "indicator-light",
+  "title": "Indicator Light",
+  "version": {
+    "model": "1.0.0"
+  },
+  "properties": {
+    "battery-indicator": {
+      "title": "Engine Indicator",
+      "description": "The current Battery Failure Indicator Light.",
+      "type": "boolean"
+    },
+    "engine-indicator":{
+      "title": "Charge Level",
+      "description": "The current Engine Failure Indicator Light.",
+      "type": "boolean"
+    }
+  },
+  "events": {
+    "Battery Protection": {
+      "title": "Battery Protection",
+      "description": "When the wear of the battery is excessive, go in battery protection.",
+      "data": {
+        "type": "string"
+      }
+    },
+    "Engine Protection": {
+      "title": "Engine Protection",
+      "description": "When the wear of the engine is excessive, go in engine protection.",
+      "data": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1"
+  ],
+  "@type": "tm:ThingModel",
+  "id": "status",
+  "title": "Status",
+  "version": {
+    "model": "1.0.0"
+  },
+  "properties": {
+    "engine": {
+      "title": "Engine Status",
+      "description": "The current Engine Status.",
+      "type": "boolean"
+    },
+    "charge-level": {
+      "title": "Charge Level",
+      "description": "The current Charge Level.",
+      "type": "double",
+      "minimum": "0.0",
+      "maximum": "100.0"
+    }
+  }
+}
