@@ -23,7 +23,7 @@
     },
     {
       "rel": "tm:submodel",
-      "href": "https://raw.githubusercontent.com/aleshark87/WoTModels/main/car/WearTime.tm.jsonld",
+      "href": "https://raw.githubusercontent.com/aleshark87/WoTModels/main/car/wear-time.tm.jsonld",
       "type": "application/tm+json",
       "instanceName": "wear-time"
     }
