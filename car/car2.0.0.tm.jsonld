@@ -11,19 +11,19 @@
   "links": [
     {
       "rel": "tm:submodel",
-      "href": "https://raw.githubusercontent.com/aleshark87/WoTModels/main/status.tm.jsonld",
+      "href": "https://raw.githubusercontent.com/aleshark87/WoTModels/main/car/status.tm.jsonld",
       "type": "application/tm+json",
       "instanceName": "status"
     },
     {
       "rel": "tm:submodel",
-      "href": "https://raw.githubusercontent.com/aleshark87/WoTModels/main/indicator-light.tm.jsonld",
+      "href": "https://raw.githubusercontent.com/aleshark87/WoTModels/main/car/indicator-light.tm.jsonld",
       "type": "application/tm+json",
       "instanceName": "indicator-light"
     },
     {
       "rel": "tm:submodel",
-      "href": "https://raw.githubusercontent.com/aleshark87/WoTModels/main/WearTime.tm.jsonld",
+      "href": "https://raw.githubusercontent.com/aleshark87/WoTModels/main/car/WearTime.tm.jsonld",
       "type": "application/tm+json",
       "instanceName": "wear-time"
     }
