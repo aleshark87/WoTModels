@@ -23,7 +23,7 @@
     }
   },
   "actions": {
-    "toggle-engine": {
+    "switch-lamp": {
       "title": "Switch The Lamp",
       "description": "Switches the lamp on/off based on the passed in boolean.",
       "type": "boolean"
