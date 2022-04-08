@@ -11,8 +11,9 @@
   "properties": {
     "lamp-status": {
       "title": "Lamp Status",
-      "description": "The current Engine Status.",
-      "type": "boolean"
+      "description": "The current Lamp Status.",
+      "type": "boolean",
+      "default": false
     }
   }
 }
