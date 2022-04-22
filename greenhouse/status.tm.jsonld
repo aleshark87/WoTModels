@@ -1,0 +1,30 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1",
+    {
+        "om": "http://www.ontology-of-units-of-measure.org/resource/om-2/"
+    }
+  ],
+  "@type": "tm:ThingModel",
+  "id": "status",
+  "title": "Status",
+  "version": {
+    "model": "1.0.0"
+  },
+  "properties": {
+    "temperature": {
+        "description": "Temperature value of the green house",
+        "type": "number",
+        "minimum": 0,
+        "maximum": 50,
+        "unit": "om:degree_Celsius"
+    },
+    "humidity": {
+        "description": "Humidity value of the green house",
+        "type": "number",
+        "minimum": 0,
+        "maximum": 100,
+        "unit": "om:percent"
+    }
+  }
+}
