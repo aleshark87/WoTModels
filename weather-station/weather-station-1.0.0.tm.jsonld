@@ -11,7 +11,7 @@
   "links": [
     {
       "rel": "tm:submodel",
-      "href": "https://raw.githubusercontent.com/aleshark87/WoTModels/main/lamp/status.tm.jsonld",
+      "href": "",
       "type": "application/tm+json",
       "instanceName": "status"
     }
