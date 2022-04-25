@@ -25,6 +25,13 @@
         "minimum": 0,
         "maximum": 100,
         "unit": "om:percent"
+    },
+    "brightness": {
+        "description": "Brightness value of the green house",
+        "type": "number",
+        "minimum": 0,
+        "maximum": 260,
+        "unit": "om:lux"
     }
   }
 }
