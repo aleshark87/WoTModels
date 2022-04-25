@@ -11,7 +11,7 @@
   "links": [
     {
       "rel": "tm:submodel",
-      "href": "https://raw.githubusercontent.com/aleshark87/WoTModels/main/weather-station/status.tm.jsonld",
+      "href": "https://raw.githubusercontent.com/aleshark87/WoTModels/main/greenhouse/status.tm.jsonld",
       "type": "application/tm+json",
       "instanceName": "status"
     }
