@@ -4,16 +4,28 @@
   ],
   "@type": "tm:ThingModel",
   "title": "Green House",
-  "description": "A Green House. It has a Humidity/Temperature Sensor, a Brightness Sensor and two Switchers.",
+  "description": "A Green House. It has a Humidity/Temperature Sensor, a Brightness Sensor, one Light.",
   "version": {
     "model": "1.0.0"
   },
   "links": [
     {
       "rel": "tm:submodel",
-      "href": "https://raw.githubusercontent.com/aleshark87/WoTModels/main/greenhouse/status.tm.jsonld",
+      "href": "https://raw.githubusercontent.com/aleshark87/WoTModels/main/greenhouse/temperature.tm.jsonld",
       "type": "application/tm+json",
-      "instanceName": "status"
+      "instanceName": "temperature"
+    },
+    {
+      "rel": "tm:submodel",
+      "href": "https://raw.githubusercontent.com/aleshark87/WoTModels/main/greenhouse/humidity.tm.jsonld",
+      "type": "application/tm+json",
+      "instanceName": "humidity"
+    },
+    {
+      "rel": "tm:submodel",
+      "href": "https://raw.githubusercontent.com/aleshark87/WoTModels/main/greenhouse/brightness.tm.jsonld",
+      "type": "application/tm+json",
+      "instanceName": "brightness"
     }
   ],
   "properties": {
@@ -23,9 +35,9 @@
     }
   },
   "actions": {
-    "switch-mode": {
-      "title": "Switches the Green House",
-      "description": "Switches the station on the mode passed by string.",
+    "switch-light": {
+      "title": "Switches the Green House Light",
+      "description": "Switches the Light of the greenhouse.",
       "type": "string"
     }
   },
