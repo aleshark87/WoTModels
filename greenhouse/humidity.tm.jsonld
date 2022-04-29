@@ -1,0 +1,24 @@
+{
+  "@context": [
+    "https://www.w3.org/2022/wot/td/v1.1",
+    {
+        "om": "http://www.ontology-of-units-of-measure.org/resource/om-2/"
+    }
+  ],
+  "@type": "tm:ThingModel",
+  "id": "humidity",
+  "title": "Humidity",
+  "version": {
+    "model": "1.0.0"
+  },
+  "properties": {
+    "humidity": {
+        "description": "Relative Humidity Value",
+        "type": "number",
+        "minimum": 0,
+        "maximum": 100,
+        "unit": "om:percent"
+    }
+  }
+}
+
