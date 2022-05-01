@@ -12,7 +12,7 @@
     "model": "1.0.0"
   },
   "properties": {
-    "temperature": {
+    "value": {
         "description": "Temperature Value",
         "type": "number",
         "minimum": 0,
