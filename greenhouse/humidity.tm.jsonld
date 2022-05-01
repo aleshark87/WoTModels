@@ -12,7 +12,7 @@
     "model": "1.0.0"
   },
   "properties": {
-    "humidity": {
+    "value": {
         "description": "Relative Humidity Value",
         "type": "number",
         "minimum": 0,
