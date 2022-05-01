@@ -12,7 +12,7 @@
     "model": "1.0.0"
   },
   "properties": {
-    "brightness": {
+    "value": {
         "description": "Brightness Value",
         "type": "number",
         "minimum": 0,
