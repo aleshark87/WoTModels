@@ -31,6 +31,11 @@
          "rel":"item",
          "type":"application/td+json",
          "href":"/features/brightness"
+      },
+      {
+         "rel":"item",
+         "type":"application/td+json",
+         "href":"/features/light"
       }
    ],
    "security":"basic_sc",
@@ -41,7 +46,7 @@
       }
    },
    "support":"https://www.eclipse.org/ditto/",
-   "created":"2022-04-29T11:44:38.412491502Z",
+   "created":"2022-05-02T19:18:45.894466838Z",
    "forms":[
       {
          "op":"readallproperties",
@@ -186,14 +191,14 @@
       }
    },
    "actions":{
-      "switch-light":{
+      "switchLight":{
          "title":"Switches the Green House Light",
          "description":"Switches the Light of the greenhouse.",
-         "type":"string",
+         "type":"boolean",
          "forms":[
             {
                "op":"invokeaction",
-               "href":"/inbox/messages/switch-light{?timeout,response-required}",
+               "href":"/inbox/messages/switchLight{?timeout,response-required}",
                "htv:methodName":"POST",
                "contentType":"application/json",
                "additionalResponses":[
@@ -267,26 +272,26 @@
          "title":"Ditto error.",
          "description":"Provides additional information about an occurred error and how to resolve it.",
          "properties":{
-            "href":{
+            "description":{
                "type":"string",
-               "title":"Error link.",
-               "description":"A link to further information about the error and how to fix it.",
-               "format":"uri"
-            },
-            "message":{
-               "type":"string",
-               "title":"Error message.",
-               "description":"The human readable message that explains what went wrong during the execution of a command/message."
+               "title":"Error description.",
+               "description":"Contains further information about the error e.g. a hint what caused the problem and how to solve it."
             },
             "error":{
                "type":"string",
                "title":"Error code identifier.",
                "description":"The error code or identifier that uniquely identifies the error."
             },
-            "description":{
+            "message":{
                "type":"string",
-               "title":"Error description.",
-               "description":"Contains further information about the error e.g. a hint what caused the problem and how to solve it."
+               "title":"Error message.",
+               "description":"The human readable message that explains what went wrong during the execution of a command/message."
+            },
+            "href":{
+               "type":"string",
+               "title":"Error link.",
+               "description":"A link to further information about the error and how to fix it.",
+               "format":"uri"
             },
             "status":{
                "type":"integer",
