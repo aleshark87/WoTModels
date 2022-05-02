@@ -26,6 +26,12 @@
       "href": "https://raw.githubusercontent.com/aleshark87/WoTModels/main/greenhouse/brightness.tm.jsonld",
       "type": "application/tm+json",
       "instanceName": "brightness"
+    },
+    {
+      "rel": "tm:submodel",
+      "href": "https://raw.githubusercontent.com/aleshark87/WoTModels/main/greenhouse/light.tm.jsonld",
+      "type": "application/tm+json",
+      "instanceName": "light"
     }
   ],
   "properties": {
@@ -35,10 +41,10 @@
     }
   },
   "actions": {
-    "switch-light": {
+    "switchLight": {
       "title": "Switches the Green House Light",
       "description": "Switches the Light of the greenhouse.",
-      "type": "string"
+      "type": "boolean"
     }
   },
   "events": {
