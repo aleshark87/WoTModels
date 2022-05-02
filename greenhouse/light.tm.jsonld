@@ -12,8 +12,8 @@
     "value": {
       "title": "Light Status",
       "description": "The current Light Status.",
-      "type": "boolean",
-      "default": false
+      "type": "string",
+      "default": "off"
     }
   }
 }
