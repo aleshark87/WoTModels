@@ -44,7 +44,7 @@
     "switchLight": {
       "title": "Switches the Green House Light",
       "description": "Switches the Light of the greenhouse.",
-      "type": "boolean"
+      "type": "String"
     }
   },
   "events": {
@@ -52,7 +52,7 @@
       "title": "High Temperature",
       "description": "The actual Temperature is high. Returns the temperature",
       "data": {
-        "type": "integer"
+        "type": "float"
       }
     }
   }
